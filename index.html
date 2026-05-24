@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Subinuer — Product Designer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..400&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles/portfolio.css" />
+</head>
+
+<body>
+
+<!-- Cursor follower -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="cursor-badge" id="cursorBadge"><span class="glyph">↗</span><span id="cursorBadgeText">VIEW</span></div>
+
+<!-- Top navigation -->
+<header class="topbar" id="topbar">
+  <div class="topbar__left">
+    <a class="brand" href="#hero" data-goto="hero">
+      <span class="dot" aria-hidden="true"></span>
+      Subinuer
+    </a>
+  </div>
+
+  <div class="topbar__center" id="minimap" aria-hidden="true">
+    <span class="minimap-dash on peak"></span>
+    <span class="minimap-dash"></span>
+    <span class="minimap-dash"></span>
+    <span class="minimap-dash"></span>
+    <span class="minimap-dash"></span>
+    <span class="minimap-dash"></span>
+    <span class="minimap-dash"></span>
+    <span class="minimap-dash"></span>
+    <span class="minimap-dash"></span>
+    <span class="minimap-dash"></span>
+    <span class="minimap-dash"></span>
+    <span class="minimap-dash"></span>
+    <span class="minimap-dash"></span>
+    <span class="minimap-dash"></span>
+    <span class="minimap-dash"></span>
+    <span class="minimap-dash"></span>
+  </div>
+
+  <div class="topbar__right">
+    <a class="nav-link active" href="#hero">Index</a>
+    <a class="nav-link" href="#work">Work</a>
+    <a class="nav-link" href="#about">About</a>
+    <a class="nav-link" href="#contact">Contact</a>
+  </div>
+</header>
+
+<!-- Scroll progress bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+
+<!-- ============================================================
+     THE PAGE
+     ============================================================ -->
+<div class="page" id="page">
+  <div class="page__sticky" id="stage">
+    <div class="page__track" id="track">
+
+
+      <!-- ============ SECTION 1 — HERO ============ -->
+      <section class="panel panel--hero" id="hero"
+               data-screen-label="01 Hero" data-counter="01">
+
+        <!-- Floating orbit -->
+        <div class="top-orbit" id="topOrbit" aria-hidden="true">
+          <div class="top-orbit__inner" id="topOrbitInner">SAY HI</div>
+        </div>
+
+        <div class="hero">
+          <div class="hero__left">
+            <div class="role-tag reveal reveal--1">
+              <span class="avail-pip" aria-hidden="true"></span>
+              Subinuer · Product Designer · Based in Melbourne · Open for opportunities
+            </div>
+
+            <h1 class="hero__title reveal reveal--2">
+              Product Designer<br />
+              with a <em>Business Lens.</em>
+            </h1>
+
+            <p class="hero__statement reveal reveal--3">
+              I design digital products that move numbers — <strong>conversion rates</strong>,
+              <strong>engagement metrics</strong>, and real outcomes.
+              With a background in <strong>Management</strong> and a <strong>Master in Design</strong>,
+              I sit at the intersection where strategy meets interface.
+            </p>
+
+            <div class="hero__actions reveal reveal--4">
+              <a href="#work" class="btn-primary" data-hover="view" data-goto="work">
+                View selected work
+                <span class="arrow">→</span>
+              </a>
+              <a href="#contact" class="btn-secondary" data-hover="contact" data-goto="contact">
+                Get in touch
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__right reveal reveal--5">
+            <div class="hero__media">
+              <img src="assets/portrait.jpeg" alt="Portrait of Subinuer" />
+            </div>
+          </div>
+        </div>
+
+        <div class="panel__footer">
+          <div class="lead">
+            <span>Scroll down</span>
+            <span class="line"></span>
+            <span>pans horizontally</span>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ============ SECTION 2 — WORK ============ -->
+      <section class="panel panel--work" id="work"
+               data-screen-label="02 Selected Work" data-counter="02">
+
+        <div class="work">
+
+          <!-- Intro panel -->
+          <div class="work__intro">
+            <div>
+              <div class="role-tag">02 — Selected Work</div>
+              <h2>A small set of <em>recent</em> projects.</h2>
+              <div class="work__intro-industries">Fintech · Telehealth · E-Commerce</div>
+            </div>
+            <div class="work__intro-foot">
+              <div>Showing <b>04</b> of 4 projects</div>
+              <div>Press → or scroll to advance</div>
+            </div>
+          </div>
+
+          <!-- Project 1 — Onco -->
+          <a class="proj" data-hover="project" href="onco.html">
+            <div class="proj__info">
+              <span class="proj__num">P · 01</span>
+              <span class="proj__year">2025</span>
+              <div class="proj__tags">
+                <span class="tag tag--active">Dashboard Design</span>
+                <span class="tag">Telehealth</span>
+                <span class="tag">App Design</span>
+              </div>
+              <h3 class="proj__title">Onco</h3>
+              <p class="proj__desc">
+                A cross-device medical imaging support system — bridging the gap between
+                remote cancer patients in rural Australia and the specialists they can't
+                easily reach.
+              </p>
+              <span class="proj__view">View case study <span class="arrow">→</span></span>
+            </div>
+            <div class="proj__image">
+              <img src="assets/project page onco cover.png" alt="Onco project cover" />
+            </div>
+          </a>
+
+          <!-- Project 2 — Skyland Guardian -->
+          <a class="proj" data-hover="project" href="skyland.html">
+            <div class="proj__info">
+              <span class="proj__num">P · 02</span>
+              <span class="proj__year">2025</span>
+              <div class="proj__tags">
+                <span class="tag tag--active">Game Design</span>
+                <span class="tag">Fintech</span>
+                <span class="tag">Hackathon</span>
+              </div>
+              <h3 class="proj__title">Skyland Guardian</h3>
+              <p class="proj__desc">
+                A mobile guardian-style game set in a floating-island world. Owned the
+                in-game UI, onboarding, and the retention loop that lifted day-7
+                engagement by 18%.
+              </p>
+              <span class="proj__view">View case study <span class="arrow">→</span></span>
+            </div>
+            <div class="proj__image">
+              <img src="assets/project page skyland cover.png" alt="Skyland Guardian project cover" />
+            </div>
+          </a>
+
+          <!-- Project 3 — Fintech Webgame Brand Design -->
+          <a class="proj" data-hover="project" href="fintech.html">
+            <div class="proj__info">
+              <span class="proj__num">P · 03</span>
+              <span class="proj__year">2024</span>
+              <div class="proj__tags">
+                <span class="tag tag--active">Brand Design</span>
+                <span class="tag">Fintech</span>
+                <span class="tag">Web Game</span>
+              </div>
+              <h3 class="proj__title">Fintech Webgame — Brand Design</h3>
+              <p class="proj__desc">
+                A brand system for a playable on-chain experience — logo, type pairings,
+                motion tokens, and an in-game brand kit that survives across 12 mini-games.
+              </p>
+              <span class="proj__view">View case study <span class="arrow">→</span></span>
+            </div>
+            <div class="proj__image">
+              <img src="assets/project page fintechwebgame cover.png" alt="Fintech Webgame project cover" />
+            </div>
+          </a>
+
+          <!-- Project 4 — Poster Archive -->
+          <a class="proj" data-hover="project" href="posters.html">
+            <div class="proj__info">
+              <span class="proj__num">P · 04</span>
+              <span class="proj__year">2023–2025</span>
+              <div class="proj__tags">
+                <span class="tag tag--active">Graphic Design</span>
+                <span class="tag">Adobe</span>
+              </div>
+              <h3 class="proj__title">Poster <em>Archive</em></h3>
+              <p class="proj__desc">
+                A living collection of poster work spanning editorial campaigns, cultural
+                events, and speculative briefs — exploring type as image and constraint as
+                creative method.
+              </p>
+              <span class="proj__view">View archive <span class="arrow">→</span></span>
+            </div>
+            <div class="proj__image">
+              <img src="assets/project page poster cover.png" alt="Poster Archive project cover" />
+            </div>
+          </a>
+
+          <!-- Outro panel -->
+          <div class="work__outro">
+            <div class="role-tag">More on request</div>
+            <h3>That's the headline. <em>The archive is longer.</em></h3>
+            <p>Earlier work across edtech, hardware, and games available on request — drop a line and I'll send the PDF.</p>
+            <a href="#contact" class="btn-secondary" data-goto="contact" data-hover="contact">
+              Request full archive <span class="arrow">→</span>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="panel__footer">
+          <div class="lead">
+            <span>Selected work</span>
+            <span class="line"></span>
+            <span>04 projects · keep scrolling</span>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ============ SECTION 3 — ABOUT (bento grid) ============ -->
+      <section class="panel panel--about" id="about"
+               data-screen-label="03 About" data-counter="03">
+
+        <div class="about">
+
+          <!-- BIO cell (2×3) -->
+          <div class="bento bento--bio">
+            <div class="bento__corner"><span class="accent">03 / 04</span> · About</div>
+            <h2>I make design feel intentional.<br /><em>— and commercially inevitable.</em></h2>
+            <p>
+              My path into design started with a management degree and a curiosity
+              about why people choose the things they choose. I published research on
+              nostalgic cultural consumption — and without realising it, I was already
+              doing user psychology.
+            </p>
+            <p class="muted">
+              When I moved into product design, that lens came with me. I design for
+              emotional histories and irrational preferences, not just rational ones.
+            </p>
+          </div>
+
+          <!-- PHOTO cell (1×2) -->
+          <div class="bento bento--photo">
+            <div class="photo-meta">Portrait · 4:5</div>
+            <div class="photo-stage">
+              <img class="photo-img" src="assets/about me apge portrait.png" alt="Portrait of Subinuer" />
+            </div>
+          </div>
+
+          <!-- EXPERIENCE stat (1×1) -->
+          <div class="bento bento--stat">
+            <div class="bento__corner">Experience</div>
+            <span class="stat-num">1<em>+</em></span>
+            <span class="stat-label">Years designing</span>
+          </div>
+
+          <!-- EDUCATION (1×1) -->
+          <div class="bento bento--education">
+            <div class="bento__corner">Education</div>
+            <div class="edu-row">
+              <span class="institution">Sun Yat-sen University</span>
+              <span class="degree">Bachelor of Management</span>
+            </div>
+            <div class="edu-row">
+              <span class="institution">Monash University</span>
+              <span class="degree">Master of Design</span>
+            </div>
+          </div>
+
+          <!-- COMBINED — Skills · Tools + Available (row 3, right 2 cols) -->
+          <div class="bento bento--combined">
+            <div class="bento__corner">Skills · Tools</div>
+            <div class="combined-skills">
+              <span class="tag">Product Design</span>
+              <span class="tag">Wireframing</span>
+              <span class="tag">Prototyping</span>
+              <span class="tag">Vibe Coding</span>
+              <span class="tag">Figma</span>
+              <span class="tag">Adobe Suite</span>
+              <span class="tag">Research</span>
+              <span class="tag">Data Analysis</span>
+              <span class="tag">Brand</span>
+              <span class="tag">Graphic Design</span>
+              <span class="tag">Front-end</span>
+              <span class="tag">Marketing</span>
+            </div>
+            <div class="combined-divider"></div>
+            <div class="combined-foot">
+              <div class="combined-foot__left">
+                <div class="combined-now">Now</div>
+                <div class="combined-headline">Available for work — <em>Q3 2026</em></div>
+              </div>
+              <a class="combined-cta" href="mailto:subinurturghun@outlook.com" data-hover="email">
+                Start a conversation <span class="arrow">→</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="panel__footer">
+          <div class="lead">
+            <span>About</span>
+            <span class="line"></span>
+            <span>contact next</span>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ============ SECTION 4 — CONTACT (inverted) ============ -->
+      <section class="panel panel--contact" id="contact"
+               data-screen-label="04 Contact" data-counter="04">
+        <div class="contact">
+
+          <div class="role-tag">04 — Get in touch</div>
+
+          <h2 class="contact__title">
+            Have something <em>worth making</em>?<br />
+            Write to <a href="mailto:subinurturghun@outlook.com" data-hover="email">subinurturghun@outlook.com</a>
+          </h2>
+
+          <div class="contact__actions">
+            <a class="btn-primary btn-primary--inv" href="mailto:subinurturghun@outlook.com" data-hover="email">
+              Email me <span class="arrow">→</span>
+            </a>
+            <a class="btn-secondary btn-secondary--inv" href="https://www.linkedin.com/in/sabrina0512/" target="_blank" rel="noopener" data-hover="contact">
+              Connect on LinkedIn
+            </a>
+          </div>
+
+          <div class="contact__grid contact__grid--2">
+            <div class="contact__cell">
+              <span class="lbl">Email</span>
+              <span class="val"><a href="mailto:subinurturghun@outlook.com" data-hover="email">subinurturghun@outlook.com</a></span>
+            </div>
+            <div class="contact__cell">
+              <span class="lbl">Behance</span>
+              <span class="val"><a href="https://www.behance.net/turghunsubinur" target="_blank" rel="noopener" data-hover="contact">behance.net/turghunsubinur</a></span>
+            </div>
+            <div class="contact__cell">
+              <span class="lbl">LinkedIn</span>
+              <span class="val"><a href="https://www.linkedin.com/in/sabrina0512/" target="_blank" rel="noopener" data-hover="contact">linkedin.com/in/sabrina0512</a></span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="contact__foot">
+          <span>© 2026 Subinuer Turghun · All rights reserved</span>
+        </div>
+      </section>
+
+
+    </div><!-- /.page__track -->
+  </div><!-- /.page__sticky -->
+</div><!-- /.page -->
+
+
+<script src="scripts/portfolio.js"></script>
+</body>
+</html>
