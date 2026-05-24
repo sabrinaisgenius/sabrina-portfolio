@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fintech Webgame — Brand Design · Case Study · Subinuer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..400&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&family=Koulen&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles/case-study.css" />
+
+<style>
+  /* =========================================================
+     Page-specific components — typography spec + colour swatches
+     ========================================================= */
+
+  .typo-grid {
+    background: var(--color-bg);
+    border-radius: var(--radius-card);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .typo-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: 'Koulen', system-ui, sans-serif;
+    font-weight: 400;
+    color: var(--color-text);
+    text-transform: uppercase;
+    line-height: 1.05;
+  }
+  .typo-row .spec {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--color-secondary);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .typo-row--display { font-size: 48px; }
+  .typo-row--alphabet { font-size: 16px; letter-spacing: 0.05em; padding-bottom: 12px; border-bottom: 1px solid var(--color-border); }
+  .typo-row--h1 { font-size: 40px; margin-top: 6px; }
+  .typo-row--h2 { font-size: 32px; }
+  .typo-row--h3 { font-size: 24px; }
+  .typo-row--h4 { font-size: 20px; }
+  .typo-row--h5 { font-size: 14px; }
+
+  /* Two-column section helpers */
+  .two-col {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: var(--space-lg);
+    align-items: start;
+  }
+  .two-col--equal { grid-template-columns: 1fr 1fr; }
+  @media (max-width: 900px) {
+    .two-col, .two-col--equal { grid-template-columns: 1fr; }
+  }
+
+  /* Colour swatch grid */
+  .swatches {
+    background: var(--color-bg);
+    border-radius: var(--radius-card);
+    padding: 32px;
+    margin-top: var(--space-md);
+  }
+  .swatches__row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .swatches__row + .swatches__row {
+    margin-top: 12px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* Lavender and Sky Blue sit on cols 2 & 3 of a 4-col grid */
+  }
+  .swatch {
+    height: 80px;
+    border-radius: 6px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: flex-end;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1.3;
+  }
+  .swatch.empty {
+    background: transparent;
+    pointer-events: none;
+  }
+
+  /* Color blocks for the second row of swatches: only middle 2 occupied */
+  .swatches__row--secondary { grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+  /* Card-game image grids unique to this page */
+  .cards-2row { display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--space-sm); margin-top: var(--space-md); max-width: 420px; }
+  .cards-2row + .cards-2row { margin-top: var(--space-sm); }
+  .cards-2row img { width: 100%; aspect-ratio: 2 / 3; object-fit: contain; display: block; border-radius: 8px; }
+  @media (max-width: 900px) {
+    .cards-2row { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+
+<body class="case-study">
+
+<!-- Fixed back link -->
+<a class="cs-back" href="Webfolio.html#work">
+  <span class="arrow">←</span> Back
+</a>
+
+<main class="cs">
+
+  <!-- HEADER -->
+  <header class="cs__header">
+    <div class="cs__tags">
+      Brand Design <span class="sep">·</span>
+      Fintech <span class="sep">·</span>
+      Web Game
+    </div>
+    <h1 class="cs__title">Fintech Webgame — Brand Design</h1>
+    <p class="cs__subtitle">
+      A brand system for a playable on-chain experience — logo, type pairings,
+      motion tokens, and an in-game brand kit that survives across 12 mini-games.
+    </p>
+
+    <div class="cs__meta" style="grid-template-columns: repeat(4, 1fr);">
+      <div class="cs__meta-cell">
+        <span class="lbl">Role</span>
+        <span class="val">Lead Brand &amp; Visual Designer</span>
+      </div>
+      <div class="cs__meta-cell">
+        <span class="lbl">Team</span>
+        <span class="val">Cross-functional hackathon team</span>
+      </div>
+      <div class="cs__meta-cell">
+        <span class="lbl">Duration</span>
+        <span class="val">7 days</span>
+      </div>
+      <div class="cs__meta-cell">
+        <span class="lbl">Year</span>
+        <span class="val">2024</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 1 — Brand Brief -->
+  <section class="cs__section">
+    <h2 class="cs__h2">The Brand Brief</h2>
+    <p class="cs__p">
+      Skyland Guardian needed a visual identity that could speak to three
+      audiences simultaneously: teenagers as the players, parents as the
+      financial decision-makers, and potential institutional partners such as
+      schools and financial literacy programs. Each audience carries a
+      different visual vocabulary and a different threshold of trust. The
+      brand had to synthesise all three without collapsing into a compromise
+      that satisfies none of them.
+    </p>
+    <p class="cs__p">
+      The core tension was authority versus playfulness. Financial brands lean
+      toward the former — deep blues, tight typography, institutional
+      restraint. Youth games lean toward the latter — saturated colour,
+      rounded forms, expressive energy. Skyland needed both at the same time,
+      and the solution couldn't feel like a compromise between two
+      aesthetics. It had to feel like a third thing entirely.
+    </p>
+
+    <img src="assets/moodboard.png" alt="Brand Moodboard" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img); margin-top: var(--space-lg);" />
+    <div class="cs__img-caption">Moodboard · Three audience visual vocabularies mapped — the brand position sits deliberately between institutional credibility and adventure energy.</div>
+  </section>
+
+  <!-- SECTION 2 — Typography Decision -->
+  <section class="cs__section cs__section--wide">
+    <h2 class="cs__h2">Typography Decision</h2>
+
+    <div class="two-col">
+      <div>
+        <p class="cs__p">
+          Koulen is a display typeface with condensed, high-contrast letterforms.
+          It carries authority through its weight and precision, while its slight
+          quirks give it personality that a purely corporate typeface like
+          Helvetica would lack. In all-caps, it reads as monumental and
+          purposeful — the kind of typographic voice that works equally well on
+          a game loading screen and a school information poster.
+        </p>
+        <p class="cs__p">
+          The type scale was designed with two use contexts in mind: the game
+          interface, where readability at small sizes in a dynamic visual
+          environment is critical, and the marketing materials, where large
+          display sizes carry brand personality. The same typeface had to
+          function across both without modification — which is why Koulen's
+          optical precision at condensed widths was essential. A typeface that
+          only works big is not a brand typeface.
+        </p>
+      </div>
+
+      <!-- Koulen specimen -->
+      <div class="typo-grid">
+        <div class="typo-row typo-row--display">
+          <span>KOULEN</span>
+          <span class="spec">48px</span>
+        </div>
+        <div class="typo-row typo-row--alphabet">
+          <span>ABCDEFGHIJKLMNOPQRSTUVWXYZ</span>
+          <span class="spec">16px</span>
+        </div>
+        <div class="typo-row typo-row--h1">
+          <span>HEADING #1</span>
+          <span class="spec">40px</span>
+        </div>
+        <div class="typo-row typo-row--h2">
+          <span>HEADING #2</span>
+          <span class="spec">32px</span>
+        </div>
+        <div class="typo-row typo-row--h3">
+          <span>HEADING #3</span>
+          <span class="spec">24px</span>
+        </div>
+        <div class="typo-row typo-row--h4">
+          <span>HEADING #4</span>
+          <span class="spec">20px</span>
+        </div>
+        <div class="typo-row typo-row--h5">
+          <span>HEADING #5</span>
+          <span class="spec">14px</span>
+        </div>
+      </div>
+    </div>
+    <div class="cs__img-caption">Typography · Same typeface, two contexts — the type scale bridges in-game readability and marketing authority.</div>
+  </section>
+
+  <!-- SECTION 3 — Colour System -->
+  <section class="cs__section cs__section--wide">
+    <h2 class="cs__h2">Colour System</h2>
+
+    <p class="cs__p" style="max-width: 920px;">
+      The palette was built around a two-layer logic: a structural layer and an
+      expressive layer.
+    </p>
+    <p class="cs__p" style="max-width: 920px;">
+      Deep Navy <strong>#1A3456</strong> and Mid Blue <strong>#2370BC</strong>
+      form the structural layer — the colours of institutions, systems, and
+      trust. In the game UI they anchor navigation, score displays, and any
+      communication that requires the user to trust the information they are
+      reading.
+    </p>
+    <p class="cs__p" style="max-width: 920px;">
+      Terracotta <strong>#F87647</strong> and Amber <strong>#FCE1B9</strong>
+      form the expressive layer — carrying energy, warmth, and forward
+      momentum. They appear in the game world itself: the Skyland islands, the
+      artifact inventory, the mission cards, anywhere the player needs to feel
+      alive and engaged rather than informed.
+    </p>
+    <p class="cs__p" style="max-width: 920px;">
+      The design rule is simple: <strong>blues structure, warms animate.</strong>
+      This separation is not purely aesthetic — it is a functional wayfinding
+      system. When something is interactive and consequential, it lives in warm
+      colours. When something is navigational or informational, it lives in
+      cool blues. A player who has never read a single onboarding line can
+      still navigate the interface correctly because the colour system itself
+      communicates intent.
+    </p>
+
+    <img src="assets/Colour · Blues structure the interface. Warms animate it. The separation is functional wayfinding, not decoration..png" alt="Colour System" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img); margin-top: var(--space-lg);" />
+    <div class="cs__img-caption">Colour · Blues structure the interface. Warms animate it. The separation is functional wayfinding, not decoration.</div>
+
+    <!-- Swatch grid -->
+    <div class="swatches">
+      <div class="swatches__row">
+        <div class="swatch" style="background:#1A3456; color:#FCE1B9;">Deep Navy<br />#1A3456 · Structural</div>
+        <div class="swatch" style="background:#2370BC; color:#FCE1B9;">Mid Blue<br />#2370BC · Structural</div>
+        <div class="swatch" style="background:#F87647; color:#1A3456;">Terracotta<br />#F87647 · Expressive</div>
+        <div class="swatch" style="background:#FCE1B9; color:#1A3456;">Amber<br />#FCE1B9 · Expressive</div>
+      </div>
+      <div class="swatches__row swatches__row--secondary">
+        <div class="swatch empty"></div>
+        <div class="swatch" style="background:#E2DFFB; color:#1A3456;">Lavender<br />#E2DFFB · Secondary</div>
+        <div class="swatch" style="background:#E2EFFD; color:#1A3456;">Sky Blue<br />#E2EFFD · Secondary</div>
+        <div class="swatch empty"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — Poster Design -->
+  <section class="cs__section cs__section--wide">
+    <h2 class="cs__h2">Poster Design</h2>
+
+    <p class="cs__p" style="max-width: 920px;">
+      The promotional poster system had to serve two audiences: teenagers on
+      social media where the game is discovered, and parents at school
+      information nights where the educational value needs to be conveyed. The
+      same visual system had to work in both contexts without redesign — which
+      placed the entire tonal burden on typography.
+    </p>
+    <p class="cs__p" style="max-width: 920px;">
+      The solution was to let Koulen carry the brand authority and let the
+      illustration carry the adventure. Large Koulen headlines at full bleed.
+      Game world illustration as background. Minimal copy. The poster works as
+      a pure visual experience for teenagers. The headline copy provides the
+      rational hook for parents reading the same image.
+    </p>
+
+    <img src="assets/fintech webgame poster design.png" alt="Fintech Webgame Poster Design" style="width: 100%; max-width: 500px; height: auto; display: block; border-radius: var(--radius-img); margin-top: var(--space-lg);" />
+    <div class="cs__img-caption">Poster · Typography carries authority. Illustration carries adventure. One system, two audiences.</div>
+  </section>
+
+  <!-- SECTION 6 — System in Context -->
+  <section class="cs__section cs__section--wide">
+    <h2 class="cs__h2">System in Context</h2>
+    <p class="cs__p" style="max-width: 920px;">
+      A brand system is only as strong as its application consistency. The
+      Skyland Guardian visual identity was designed to function across four
+      distinct contexts without losing coherence: the game UI, the
+      promotional website, the card game system, and print materials. Each
+      context has different constraints — screen resolution, physical print,
+      motion, static — but the same colour logic, typographic voice, and
+      structural-versus-expressive colour rule applies across all of them.
+    </p>
+
+    <!-- Cards (front + back) -->
+    <div class="cs__section-eyebrow" style="color: var(--color-secondary); margin-top: var(--space-xl);">
+      Card Game System · Cards
+    </div>
+    <p style="font-size: 14px; color: var(--color-secondary); margin-bottom: var(--space-sm);">
+      Five cards, each with front and back face — the card game system extends the brand into physical game logic.
+    </p>
+    <div class="cards-2row">
+      <img src="assets/card 1 front.png" alt="Card 01 Front" />
+      <img src="assets/card2 front.png" alt="Card 02 Front" />
+      <img src="assets/card3 front.png" alt="Card 03 Front" />
+      <img src="assets/card4 front.png" alt="Card 04 Front" />
+      <img src="assets/card5 front.png" alt="Card 05 Front" />
+    </div>
+    <div class="cards-2row">
+      <img src="assets/card01-back.png" alt="Card 01 Back" />
+      <img src="assets/card02-back.png" alt="Card 02 Back" />
+      <img src="assets/card03-back.png" alt="Card 03 Back" />
+      <img src="assets/card04-back.png" alt="Card 04 Back" />
+      <img src="assets/card05-back.png" alt="Card 05 Back" />
+    </div>
+
+    <!-- Badges -->
+    <div class="cs__section-eyebrow" style="color: var(--color-secondary); margin-top: var(--space-xl);">
+      Card Game System · Badges
+    </div>
+    <p style="font-size: 14px; color: var(--color-secondary); margin-bottom: var(--space-sm);">
+      Two badge designs — awarded for meaningful player behaviour over time.
+    </p>
+    <div class="cs__img-grid cs__img-grid--2" style="max-width: 380px;">
+      <img src="assets/badge 1.png" alt="Badge 01 · Diversification Master" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img);" />
+      <img src="assets/badge 2.png" alt="Badge 02 · Storm Survivor" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img);" />
+    </div>
+
+    <!-- Characters -->
+    <div class="cs__section-eyebrow" style="color: var(--color-secondary); margin-top: var(--space-xl);">
+      Card Game System · Characters
+    </div>
+    <p style="font-size: 14px; color: var(--color-secondary); margin-bottom: var(--space-sm);">
+      Three character designs — each embodies a different investment archetype within the Skyland world.
+    </p>
+    <div class="cs__img-grid cs__img-grid--3" style="max-width: 580px;">
+      <img src="assets/character 1.png" alt="Character 01" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img);" />
+      <img src="assets/character2.png" alt="Character 02" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img);" />
+      <img src="assets/character 3.png" alt="Character 03" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img);" />
+    </div>
+
+    <div class="cs__img-caption" style="margin-top: var(--space-lg);">
+      System in Context · One visual language across game UI, promotional
+      website, card game system, and print — consistency is the credibility signal.
+    </div>
+  </section>
+
+  <!-- SECTION 7 — What I Learned -->
+  <section class="cs__section">
+    <h2 class="cs__h2">What I Learned</h2>
+    <div class="cs__learn">
+      <div class="cs__learn-item">
+        <span class="lbl">What worked</span>
+        <div class="body">
+          Encoding the authority-versus-playfulness tension into the colour
+          system rather than suppressing it. Blues structure, warms animate —
+          this rule gave every team member a decision-making framework that
+          required no further discussion.
+        </div>
+      </div>
+      <div class="cs__learn-item">
+        <span class="lbl">What I'd do differently</span>
+        <div class="body">
+          The logo mark deserved more exploration time. We landed on a strong
+          solution but under time pressure. Given another sprint I would have
+          tested more directions before committing to the final form.
+        </div>
+      </div>
+      <div class="cs__learn-item">
+        <span class="lbl">What this taught me</span>
+        <div class="body">
+          Brand design for products with multiple audiences is not about
+          finding a middle ground. It's about building a system with enough
+          internal logic that each audience finds their own entry point —
+          without the brand feeling fractured.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT PROJECT -->
+  <a class="cs__next" href="posters.html">
+    <div class="eyebrow">Next project</div>
+    <div class="title">Poster Archive <span class="arrow">→</span></div>
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="cs__footer">
+    <span>© 2026 Subinuer Turghun · All rights reserved</span>
+    <a href="Webfolio.html" style="color: inherit; text-decoration: none;">← Back to index</a>
+  </footer>
+
+</main>
+
+</body>
+</html>

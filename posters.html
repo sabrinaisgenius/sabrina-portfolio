@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Poster Archive — Subinuer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..400&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles/case-study.css" />
+
+<style>
+  /* Page-specific — full-bleed poster list with mono captions */
+  .archive {
+    max-width: 880px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+  .poster {
+    border-radius: var(--radius-img);
+    overflow: hidden;
+  }
+  .poster img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .poster--placeholder {
+    aspect-ratio: 3 / 4;
+    background: var(--color-surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .poster--placeholder .label {
+    font-family: var(--font-display);
+    font-style: italic; font-weight: 300;
+    font-size: 24px;
+    color: var(--color-secondary);
+  }
+  .poster-meta {
+    margin-top: var(--space-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .poster-meta .name { color: var(--color-text); }
+  .poster-meta .year { color: var(--color-secondary); }
+</style>
+</head>
+
+<body class="case-study">
+
+<!-- Fixed back link -->
+<a class="cs-back" href="Webfolio.html#work">
+  <span class="arrow">←</span> Back
+</a>
+
+<main class="cs">
+
+  <!-- HEADER -->
+  <header class="cs__header">
+    <div class="cs__tags">
+      Graphic Design <span class="sep">·</span>
+      Editorial <span class="sep">·</span>
+      Archive
+    </div>
+    <h1 class="cs__title">Poster Archive</h1>
+    <p class="cs__subtitle">
+      A living collection of poster work spanning editorial campaigns, cultural
+      events, and speculative briefs — exploring type as image and constraint as
+      creative method.
+    </p>
+
+    <div class="cs__meta" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="cs__meta-cell">
+        <span class="lbl">Period</span>
+        <span class="val">2023 — 2025</span>
+      </div>
+      <div class="cs__meta-cell">
+        <span class="lbl">Discipline</span>
+        <span class="val">Graphic Design &amp; Visual Communication</span>
+      </div>
+      <div class="cs__meta-cell">
+        <span class="lbl">Tools</span>
+        <span class="val">Adobe Illustrator · Photoshop · InDesign</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ARCHIVE — 5 posters, each full-width, 3:4 -->
+  <section class="cs__section archive" style="padding-top: var(--space-xl);">
+
+    <div class="poster-item">
+      <div class="poster"><img src="assets/poster01.png" alt="Poster 01" /></div>
+      <div class="poster-meta">
+        <span class="name">App Design Promotion Poster</span>
+        <span class="year">2025</span>
+      </div>
+    </div>
+
+    <div class="poster-item">
+      <div class="poster"><img src="assets/poster02.png" alt="Poster 02" /></div>
+      <div class="poster-meta">
+        <span class="name">Monash Intern Poster Design for Binge Eating Research</span>
+        <span class="year">2024</span>
+      </div>
+    </div>
+
+    <div class="poster-item">
+      <div class="poster"><img src="assets/poster03.png" alt="Poster 03" /></div>
+      <div class="poster-meta">
+        <span class="name">Environmental Awareness Poster Design</span>
+        <span class="year">2024</span>
+      </div>
+    </div>
+
+    <div class="poster-item">
+      <div class="poster"><img src="assets/poster04.png" alt="Poster 04" /></div>
+      <div class="poster-meta">
+        <span class="name">Fintech Webgame Promotional Poster Design</span>
+        <span class="year">2025</span>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- BACK TO START -->
+  <a class="cs__next" href="onco.html">
+    <div class="eyebrow">Back to start</div>
+    <div class="title">Onco <span class="arrow">→</span></div>
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="cs__footer">
+    <span>© 2026 Subinuer Turghun · All rights reserved</span>
+    <a href="Webfolio.html" style="color: inherit; text-decoration: none;">← Back to index</a>
+  </footer>
+
+</main>
+
+</body>
+</html>

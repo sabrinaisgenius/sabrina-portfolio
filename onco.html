@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Onco — Case Study · Subinuer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..400&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles/case-study.css" />
+</head>
+
+<body class="case-study">
+
+<!-- Fixed back link -->
+<a class="cs-back" href="Webfolio.html#work">
+  <span class="arrow">←</span> Back
+</a>
+
+<main class="cs">
+
+  <!-- HEADER -->
+  <header class="cs__header">
+    <div class="cs__tags">
+      Dashboard Design <span class="sep">·</span>
+      Telehealth <span class="sep">·</span>
+      App Design
+    </div>
+    <h1 class="cs__title">Onco</h1>
+    <p class="cs__subtitle">
+      A cross-device medical imaging support system — bridging the gap between
+      remote cancer patients in rural Australia and the specialists they can't
+      easily reach.
+    </p>
+
+    <!-- META BAR -->
+    <div class="cs__meta">
+      <div class="cs__meta-cell">
+        <span class="lbl">Role</span>
+        <span class="val">UX Designer & Visual Designer</span>
+      </div>
+      <div class="cs__meta-cell">
+        <span class="lbl">Team</span>
+        <span class="val">4 members</span>
+      </div>
+      <div class="cs__meta-cell">
+        <span class="lbl">Duration</span>
+        <span class="val">3 months</span>
+      </div>
+      <div class="cs__meta-cell">
+        <span class="lbl">Year</span>
+        <span class="val">2025</span>
+      </div>
+      <div class="cs__meta-cell">
+        <span class="lbl">Award</span>
+        <span class="val">Best Capstone Project — Monash University</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO IMAGE -->
+  <div class="cs__hero-img">
+    <img src="assets/Onco-heroimage.png" alt="Onco hero image" />
+  </div>
+
+  <!-- SECTION 1 — Problem -->
+  <section class="cs__section">
+    <h2 class="cs__h2">The Problem Worth Solving</h2>
+    <p class="cs__p">
+      In rural South Australia, the nearest cancer specialist can be a six-hour
+      drive away. Imaging equipment is concentrated in major city hospitals.
+      When Maria — a 55-year-old woman from a remote farming village — receives
+      a scan result, she often can't understand it, can't easily reach her doctor
+      to ask questions, and has no way to track her treatment progress between
+      appointments.
+    </p>
+    <p class="cs__p">
+      This isn't a rare edge case. Rural cancer patients in Australia face
+      significantly longer wait times and lower five-year survival rates than
+      their metropolitan counterparts. We were briefed by a real client
+      stakeholder to explore how a digital platform could close this gap — not
+      by replacing clinical care, but by giving patients like Maria more agency
+      and continuity within it.
+    </p>
+
+    <blockquote class="cs__quote">
+      A note on scope: Onco was developed as a concept project in direct
+      response to a real client brief. All design decisions were made against
+      genuine clinical constraints and evaluated by our client partner.
+    </blockquote>
+  </section>
+
+  <!-- SECTION 2 — Who -->
+  <section class="cs__section">
+    <h2 class="cs__h2">Who We Designed For</h2>
+    <p class="cs__p">
+      We identified two distinct user groups whose needs are interdependent: the
+      patient who needs clarity and emotional reassurance, and the oncologist
+      who needs efficiency and reliable data. Designing for one without the
+      other would break the system.
+    </p>
+
+    <!-- Primary Persona — Maria -->
+    <div class="cs__section-eyebrow" style="color: var(--color-secondary); margin-bottom: var(--space-md);">Primary Target User — Patient</div>
+    <div style="display: grid; grid-template-columns: 280px 1fr; gap: var(--space-lg); align-items: start;">
+      <div>
+        <img src="assets/patient persona.png" alt="Patient Persona — Maria" style="width: 100%; border-radius: var(--radius-img); display: block; margin-bottom: 10px;" />
+        <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-secondary);">Meet Maria</div>
+      </div>
+      <div style="padding-top: 4px;">
+        <div style="margin-bottom: var(--space-md);">
+          <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 8px;">Background</div>
+          <p style="font-size: 15px; line-height: 1.6; color: var(--color-text);">Has 3 kids between 12–24, 2 older being daughters and youngest a son. Lives with extended family, where they all work in the farm to make a living. Health condition: She is suspected to be an early-stage lung disease. There is a history of lung cancer in the family.</p>
+        </div>
+        <div style="margin-bottom: var(--space-md);">
+          <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 8px;">Her Needs</div>
+          <ul style="font-size: 15px; line-height: 1.7; color: var(--color-text); padding-left: 18px;">
+            <li>A clear and understandable way of presenting medical images</li>
+            <li>Maintain a remote communication channel with the doctor</li>
+            <li>Receive continuous reminders and psychological support during the treatment process</li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 8px;">Challenges</div>
+          <ul style="font-size: 15px; line-height: 1.7; color: var(--color-text); padding-left: 18px;">
+            <li>Limited access to specialised care (nearest hospital is a six-hour drive)</li>
+            <li>Fear of complex medical procedures and unfamiliar medical imaging</li>
+            <li>Need for clear, understandable health information</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Secondary Persona — Oncologist -->
+    <div class="cs__section-eyebrow" style="color: var(--color-secondary); margin-top: var(--space-xl); margin-bottom: var(--space-md);">Secondary Target User — Oncologist</div>
+    <p class="cs__p">
+      Be responsible for image interpretation, formulating treatment plans and following up on the patient's condition.
+      At present, communication is often poor due to geographical restrictions and system fragmentation.
+      A tool that can be quickly integrated into AI analysis, annotated images, and collaborate with other systems is needed.
+    </p>
+  </section>
+
+  <!-- SECTION 3 — Approach -->
+  <section class="cs__section">
+    <h2 class="cs__h2">Our Design Approach</h2>
+
+    <div class="cs__note">
+      <div class="cs__note-label">Decision 01</div>
+      <div class="cs__note-title">Why two interfaces, not one?</div>
+      <div class="cs__note-body">
+        Our initial brief focused on the patient app. But in early design
+        explorations, we quickly realised that a patient-facing tool without a
+        corresponding clinical interface would fail: if Maria can see her scan
+        but her doctor doesn't know she's looking at it, the communication gap
+        remains.
+      </div>
+    </div>
+
+    <div class="cs__note">
+      <div class="cs__note-label">Decision 02</div>
+      <div class="cs__note-title">Why AI summary, not direct doctor notes?</div>
+      <div class="cs__note-body">
+        Doctor time is the scarcest resource in rural healthcare. We designed
+        the AI summary layer not as a replacement for clinical judgment, but as
+        a first-pass translation of complex scan language into accessible terms
+        — reducing the communication burden on both ends. The doctor approves
+        and modifies before the patient sees it.
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — The Design -->
+  <section class="cs__section cs__section--wide">
+    <h2 class="cs__h2">The Design</h2>
+
+    <!-- IA — coded diagram -->
+    <div class="cs__section-eyebrow" style="margin-top: var(--space-lg);">Information Architecture</div>
+    <div class="ia-tree-wrap">
+
+      <!-- ONCO APP -->
+      <div class="ia-tree-section">
+        <div class="ia-tree-header">
+          <div class="ia-tree-title">Onco app</div>
+        </div>
+        <div class="ia-col">
+          <div class="ia-node">Log in</div>
+          <div class="ia-vline"></div>
+          <div class="ia-node">Home page</div>
+          <div class="ia-vline"></div>
+          <div class="ia-children">
+            <div class="ia-child">
+              <div class="ia-node">Calendar page</div>
+              <div class="ia-vline"></div>
+              <div class="ia-node ia-node--sm">Log symptoms</div>
+            </div>
+            <div class="ia-child">
+              <div class="ia-node">Report page</div>
+              <div class="ia-vline"></div>
+              <div class="ia-node">Diagnosis</div>
+              <div class="ia-vline"></div>
+              <div class="ia-children">
+                <div class="ia-child"><div class="ia-node ia-node--sm">Appointment</div></div>
+                <div class="ia-child"><div class="ia-node ia-node--sm">Next step</div></div>
+                <div class="ia-child"><div class="ia-node ia-node--sm">Progress</div></div>
+              </div>
+            </div>
+            <div class="ia-child">
+              <div class="ia-node">Chatbox</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ONCO DASHBOARD -->
+      <div class="ia-tree-section">
+        <div class="ia-tree-header">
+          <div class="ia-tree-title">Onco dashboard</div>
+          <div class="ia-tree-note">Synchronise to</div>
+        </div>
+        <div class="ia-col">
+          <div class="ia-node">Home page</div>
+          <div class="ia-vline"></div>
+          <div class="ia-children">
+            <div class="ia-child"><div class="ia-node">Notes panel</div></div>
+            <div class="ia-child"><div class="ia-node">AI summary</div></div>
+            <div class="ia-child"><div class="ia-node">Integrated tools</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ONCO PATIENT DASHBOARD -->
+      <div class="ia-tree-section">
+        <div class="ia-tree-header">
+          <div class="ia-tree-title">Onco patient dashboard</div>
+        </div>
+        <div class="ia-col">
+          <div class="ia-node">Home page</div>
+          <div class="ia-vline"></div>
+          <div class="ia-children ia-children--lg">
+            <div class="ia-child">
+              <div class="ia-node">Consultation page</div>
+            </div>
+            <div class="ia-child">
+              <div class="ia-node">Report page</div>
+              <div class="ia-vline"></div>
+              <div class="ia-children">
+                <div class="ia-child"><div class="ia-node ia-node--sm">Diagnosis</div></div>
+                <div class="ia-child"><div class="ia-node ia-node--sm">Next step</div></div>
+                <div class="ia-child"><div class="ia-node ia-node--sm">Progress</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="cs__img-caption">IA · Three connected layers — Onco App / Onco Dashboard / Onco Patient Dashboard</div>
+
+    <!-- Wireframes -->
+    <div class="cs__section-eyebrow" style="margin-top: var(--space-2xl);">Wireframes</div>
+    <div class="cs__img">
+      <img src="assets/onco-wireframes.png" alt="Onco wireframes" />
+    </div>
+
+    <!-- Design System — coded -->
+    <div class="cs__section-eyebrow" style="margin-top: var(--space-2xl);">Design System</div>
+
+    <!-- Logos & icon row -->
+    <div style="display: flex; gap: var(--space-lg); align-items: flex-end; flex-wrap: wrap; margin-top: var(--space-md);">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+        <img src="assets/design system onco logo dark.png" alt="Onco Logo Dark" style="height: 72px; width: auto; display: block;" />
+        <span style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-secondary);">Onco Logo</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+        <img src="assets/design system onco logo.png" alt="Onco Logo" style="height: 72px; width: auto; display: block;" />
+        <span style="font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-secondary);">Onco Logo</span>
+      </div>
+      <img src="assets/onco design system.png" alt="Onco icon set" style="height: 72px; width: auto; display: block;" />
+    </div>
+
+    <!-- Typography scale -->
+    <div style="background: var(--color-surface); border-radius: var(--radius-img); padding: var(--space-lg); margin-top: var(--space-lg);">
+      <div style="display: flex; flex-direction: column; gap: 0;">
+        <div style="display: flex; align-items: baseline; gap: 20px; border-bottom: 1px solid var(--color-border); padding-bottom: 16px; margin-bottom: 16px;">
+          <span style="font-family: var(--font-mono); font-size: 11px; color: var(--color-secondary); width: 48px; flex-shrink: 0;">48px</span>
+          <span style="font-size: 48px; font-weight: 700; line-height: 1.1; letter-spacing: -0.02em;">Display</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 20px; border-bottom: 1px solid var(--color-border); padding-bottom: 16px; margin-bottom: 16px;">
+          <span style="font-family: var(--font-mono); font-size: 11px; color: var(--color-secondary); width: 48px; flex-shrink: 0;">32px</span>
+          <span style="font-size: 32px; font-weight: 700; line-height: 1.2; letter-spacing: -0.01em;">Heading</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 20px; border-bottom: 1px solid var(--color-border); padding-bottom: 16px; margin-bottom: 16px;">
+          <span style="font-family: var(--font-mono); font-size: 11px; color: var(--color-secondary); width: 48px; flex-shrink: 0;">24px</span>
+          <span style="font-size: 24px; font-weight: 600; line-height: 1.3;">Subheading</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 20px; border-bottom: 1px solid var(--color-border); padding-bottom: 16px; margin-bottom: 16px;">
+          <span style="font-family: var(--font-mono); font-size: 11px; color: var(--color-secondary); width: 48px; flex-shrink: 0;">16px</span>
+          <span style="font-size: 16px; line-height: 1.5;">Body — the quick brown fox jumps over the lazy dog</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 20px;">
+          <span style="font-family: var(--font-mono); font-size: 11px; color: var(--color-secondary); width: 48px; flex-shrink: 0;">12px</span>
+          <span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-secondary);">Caption / Label</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Colour palette -->
+    <div style="margin-top: var(--space-lg); display: flex; flex-direction: column; gap: 12px;">
+      <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px;">
+        <div style="background:#E2DFFB; border-radius:8px; padding:20px 12px 12px; min-height:80px; display:flex; flex-direction:column; justify-content:flex-end;"><span style="font-family:var(--font-mono); font-size:10px; color:#2620B8;">E2DFFB</span></div>
+        <div style="background:#B6AEF2; border-radius:8px; padding:20px 12px 12px; min-height:80px; display:flex; flex-direction:column; justify-content:flex-end;"><span style="font-family:var(--font-mono); font-size:10px; color:#17125B;">B6AEF2</span></div>
+        <div style="background:#8A7FE9; border-radius:8px; padding:20px 12px 12px; min-height:80px; display:flex; flex-direction:column; justify-content:flex-end;"><span style="font-family:var(--font-mono); font-size:10px; color:#fff;">8A7FE9</span></div>
+        <div style="background:#2620B8; border-radius:8px; padding:20px 12px 12px; min-height:80px; display:flex; flex-direction:column; justify-content:flex-end;"><span style="font-family:var(--font-mono); font-size:10px; color:rgba(255,255,255,0.7);">2620B8</span></div>
+        <div style="background:#17125B; border-radius:8px; padding:20px 12px 12px; min-height:80px; display:flex; flex-direction:column; justify-content:flex-end;"><span style="font-family:var(--font-mono); font-size:10px; color:rgba(255,255,255,0.6);">17125B</span></div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px;">
+        <div style="background:#DDEDFC; border-radius:8px; padding:20px 12px 12px; min-height:80px; display:flex; flex-direction:column; justify-content:flex-end;"><span style="font-family:var(--font-mono); font-size:10px; color:#2620B8;">DDEDFC</span></div>
+        <div style="background:#A60DF8; border-radius:8px; padding:20px 12px 12px; min-height:80px; display:flex; flex-direction:column; justify-content:flex-end;"><span style="font-family:var(--font-mono); font-size:10px; color:rgba(255,255,255,0.9);">A60DF8</span></div>
+        <div style="background:#72B4F3; border-radius:8px; padding:20px 12px 12px; min-height:80px; display:flex; flex-direction:column; justify-content:flex-end;"><span style="font-family:var(--font-mono); font-size:10px; color:#17125B;">72B4F3</span></div>
+        <div style="background:#4099F0; border-radius:8px; padding:20px 12px 12px; min-height:80px; display:flex; flex-direction:column; justify-content:flex-end;"><span style="font-family:var(--font-mono); font-size:10px; color:#fff;">4099F0</span></div>
+        <div style="background:#000000; border-radius:8px; padding:20px 12px 12px; min-height:80px; display:flex; flex-direction:column; justify-content:flex-end;"><span style="font-family:var(--font-mono); font-size:10px; color:rgba(255,255,255,0.6);">000000</span></div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px;">
+        <div style="background:#F6D6FB; border-radius:8px; padding:20px 12px 12px; min-height:80px; display:flex; flex-direction:column; justify-content:flex-end;"><span style="font-family:var(--font-mono); font-size:10px; color:#D349E0;">F6D6FB</span></div>
+        <div style="background:#EAA45F; border-radius:8px; padding:20px 12px 12px; min-height:80px; display:flex; flex-direction:column; justify-content:flex-end;"><span style="font-family:var(--font-mono); font-size:10px; color:#fff;">EAA45F</span></div>
+        <div style="background:#DF75E7; border-radius:8px; padding:20px 12px 12px; min-height:80px; display:flex; flex-direction:column; justify-content:flex-end;"><span style="font-family:var(--font-mono); font-size:10px; color:#fff;">DF75E7</span></div>
+        <div style="background:#D349E0; border-radius:8px; padding:20px 12px 12px; min-height:80px; display:flex; flex-direction:column; justify-content:flex-end;"><span style="font-family:var(--font-mono); font-size:10px; color:#fff;">D349E0</span></div>
+        <div style="background:#FFFFFF; border-radius:8px; padding:20px 12px 12px; min-height:80px; display:flex; flex-direction:column; justify-content:flex-end; border:1px solid rgba(0,0,0,0.08);"><span style="font-family:var(--font-mono); font-size:10px; color:#0D0D0D;">FFFFFF</span></div>
+      </div>
+    </div>
+
+    <!-- Patient App — Home -->
+    <div class="cs__section-eyebrow" style="margin-top: var(--space-2xl); color: var(--color-secondary);">
+      Patient App · Home Page
+    </div>
+    <div class="cs__img-grid cs__img-grid--2" style="max-width: 440px; gap: 56px;">
+      <img src="assets/apphome01.png" alt="App Home 01" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img);" />
+      <img src="assets/apphome02.png" alt="App Home 02" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img);" />
+    </div>
+    <div class="cs__img-caption">Home Page · Scan status and next appointment surfaced within 2 seconds of opening.</div>
+
+    <!-- Patient App — Report -->
+    <div class="cs__section-eyebrow" style="margin-top: var(--space-2xl); color: var(--color-secondary);">
+      Patient App · Report Page
+    </div>
+    <div class="cs__img-grid cs__img-grid--4" style="max-width: 900px; gap: 48px;">
+      <img src="assets/report01.png" alt="Report 01" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img);" />
+      <img src="assets/report02.png" alt="Report 02" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img);" />
+      <img src="assets/report03.png" alt="Report 03" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img);" />
+      <img src="assets/report04.png" alt="Report 04" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img);" />
+    </div>
+    <div class="cs__img-caption">Report Page · Complex imaging results translated into plain language the patient can understand and act on.</div>
+
+    <!-- Doctor Dashboard -->
+    <div class="cs__section-eyebrow" style="margin-top: var(--space-2xl); color: var(--color-secondary);">
+      Doctor Dashboard
+    </div>
+    <div class="cs__img-grid cs__img-grid--2" style="gap: 32px;">
+      <img src="assets/doctor dashboard.png" alt="Doctor Dashboard" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img);" />
+      <img src="assets/doctor dashboard 1.png" alt="Doctor Dashboard 1" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img);" />
+      <img src="assets/doctor dashboard 2.png" alt="Doctor Dashboard 2" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img);" />
+    </div>
+    <div class="cs__img-caption">Synchronized report data viewable by both patient and doctor in real time.</div>
+
+    <!-- Patient Dashboard — Report -->
+    <div class="cs__section-eyebrow" style="margin-top: var(--space-2xl); color: var(--color-secondary);">
+      Patient Dashboard · Report Page
+    </div>
+    <div class="cs__img-grid cs__img-grid--2" style="gap: 32px;">
+      <img src="assets/dashboard report01.png" alt="Dashboard Report 01" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img);" />
+      <img src="assets/dashboard report.png" alt="Dashboard Report" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img);" />
+      <img src="assets/dashboard report1.png" alt="Dashboard Report 1" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img);" />
+      <img src="assets/dashboard report2.png" alt="Dashboard Report 2" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img);" />
+    </div>
+    <div class="cs__img-caption">Report Page · Doctor annotates AI-assisted scan analysis and controls what information is pushed to the patient app.</div>
+
+    <!-- Doctor Dashboard — Consultation -->
+    <div class="cs__section-eyebrow" style="margin-top: var(--space-2xl); color: var(--color-secondary);">
+      Doctor Dashboard · Consultation Page
+    </div>
+    <div class="cs__img-grid cs__img-grid--2" style="gap: 32px;">
+      <img src="assets/consultation01.png" alt="Consultation 01" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img);" />
+      <img src="assets/consultation02.png" alt="Consultation 02" style="width: 100%; height: auto; display: block; border-radius: var(--radius-img);" />
+    </div>
+    <div class="cs__img-caption">Consultation Page · Live video consultation with remote specialists, directly linked to the patient's scan data.</div>
+  </section>
+
+  <!-- SECTION 5 — Business Context -->
+  <section class="cs__section cs__business">
+    <div class="cs__section-eyebrow">Business Context</div>
+    <h2 class="cs__h2" style="font-size: 28px;">Designing for commercial reality</h2>
+    <p class="cs__p" style="margin-bottom: 0;">
+      If Onco were to pursue a real-world go-to-market path, the most viable
+      model would be B2B2C: licensed to hospitals or regional health networks,
+      who then provide access to patients as part of their care pathway. This
+      removes the friction of patient acquisition and aligns with how healthcare
+      technology is actually procured in Australia. Understanding this shaped
+      how we prioritised features — anything that reduced administrative burden
+      on the clinical side was treated as a priority.
+    </p>
+  </section>
+
+  <!-- SECTION 6 — What I Learned -->
+  <section class="cs__section">
+    <h2 class="cs__h2">What I Learned</h2>
+    <div class="cs__learn">
+      <div class="cs__learn-item">
+        <span class="lbl">What worked</span>
+        <div class="body">
+          The dual-interface structure — designing patient and doctor views as
+          a connected system — was validated by our client stakeholder as the
+          most clinically realistic aspect of the concept.
+        </div>
+      </div>
+      <div class="cs__learn-item">
+        <span class="lbl">What I'd do differently</span>
+        <div class="body">
+          We spent too much time early on the speculative future framing and
+          not enough on information architecture. I'd prioritise IA testing
+          with real users before visual design.
+        </div>
+      </div>
+      <div class="cs__learn-item">
+        <span class="lbl">What this taught me</span>
+        <div class="body">
+          Healthcare design is not about making things pretty. It's about
+          reducing cognitive and emotional load at the exact moment when a
+          person is most scared. That constraint made me a better information
+          designer.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEXT PROJECT -->
+  <a class="cs__next" href="skyland.html">
+    <div class="eyebrow">Next project</div>
+    <div class="title">Skyland Guardian <span class="arrow">→</span></div>
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="cs__footer">
+    <span>© 2026 Subinuer Turghun · All rights reserved</span>
+    <a href="Webfolio.html" style="color: inherit; text-decoration: none;">← Back to index</a>
+  </footer>
+
+</main>
+
+</body>
+</html>
