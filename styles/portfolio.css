@@ -909,8 +909,8 @@ section.panel {
   width: 100%; max-width: 900px;
 }
 .contact__grid--2 {
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 720px;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 900px;
 }
 .contact__cell {
   display: flex; flex-direction: column;
