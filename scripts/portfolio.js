@@ -248,7 +248,64 @@
     window.scrollTo(0, 0);
   }
 
-  // ---------- 9. INIT + RESIZE ----------
+  // ---------- 9. MOBILE TOUCH → HORIZONTAL PAN ----------
+  // Converts horizontal finger swipe into window.scrollY changes so the
+  // existing scroll→translate mechanism works on mobile without modification.
+  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+    let tStartX = 0, tStartY = 0, tStartScrollY = 0;
+    let swipeDir = null; // 'h' | 'v' | null
+
+    const mobileHint = document.getElementById('mobileHint');
+
+    window.addEventListener('touchstart', (e) => {
+      tStartX = e.touches[0].clientX;
+      tStartY = e.touches[0].clientY;
+      tStartScrollY = window.scrollY;
+      swipeDir = null;
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (e) => {
+      const dx = tStartX - e.touches[0].clientX; // positive = swipe left
+      const dy = tStartY - e.touches[0].clientY;
+
+      // Determine swipe axis on first significant movement
+      if (!swipeDir) {
+        if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+        swipeDir = Math.abs(dx) >= Math.abs(dy) ? 'h' : 'v';
+      }
+
+      if (swipeDir === 'h') {
+        e.preventDefault(); // block vertical scroll during horizontal swipe
+        const newY = Math.max(0, Math.min(maxScroll, tStartScrollY + dx / SPEED_RATIO));
+        window.scrollTo(0, newY);
+
+        // Dismiss hint on first real swipe
+        if (mobileHint && !mobileHint.dataset.dismissed) {
+          mobileHint.dataset.dismissed = '1';
+          mobileHint.style.transition = 'opacity 0.3s';
+          mobileHint.style.opacity = '0';
+          setTimeout(() => mobileHint.remove(), 350);
+        }
+      }
+      // vertical swipes fall through → browser scrolls inside the panel (overflow-y: auto)
+    }, { passive: false });
+
+    window.addEventListener('touchend', () => {
+      if (swipeDir !== 'h' || !anchors.length) return;
+      // Snap to nearest panel
+      const y = window.scrollY;
+      let nearest = anchors[0];
+      let minDist = Infinity;
+      anchors.forEach(a => {
+        const d = Math.abs(a.startY - y);
+        if (d < minDist) { minDist = d; nearest = a; }
+      });
+      window.scrollTo({ top: nearest.startY, behavior: 'smooth' });
+      swipeDir = null;
+    }, { passive: true });
+  }
+
+  // ---------- 10. INIT + RESIZE ----------
   function init() {
     measureAnchors();
     measure();
