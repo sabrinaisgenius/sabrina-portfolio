@@ -522,52 +522,71 @@ body.case-study {
    RESPONSIVE
    ============================================================ */
 @media (max-width: 768px) {
+  /* Shrink spacing tokens so ALL inline var() references are smaller on mobile */
+  :root {
+    --space-lg:  28px;
+    --space-xl:  44px;
+    --space-2xl: 60px;
+  }
+
   /* Layout */
-  .cs { padding: 64px var(--space-md) var(--space-xl); }
-  .cs__header { padding: var(--space-lg) 0 var(--space-md); }
+  .cs { padding: 56px var(--space-md) var(--space-xl); }
+  .cs__header { padding: var(--space-md) 0 var(--space-sm); }
 
   /* Typography */
-  .cs__title { font-size: clamp(26px, 7.5vw, 40px); }
-  .cs__subtitle { font-size: 15px; }
-  .cs__h2 { font-size: 22px; margin-bottom: var(--space-md); }
-  .cs__p { font-size: 15px; }
-  .cs__quote { font-size: 17px; padding-left: var(--space-md); }
+  .cs__title    { font-size: clamp(24px, 7vw, 38px); }
+  .cs__subtitle { font-size: 14px; }
+  .cs__h2       { font-size: 20px; margin-bottom: var(--space-md); }
+  .cs__p        { font-size: 14px; line-height: 1.65; }
+  .cs__quote    { font-size: 16px; padding-left: 16px; }
 
-  /* Meta bar */
+  /* Caption: less letter-spacing so long labels wrap cleanly */
+  .cs__img-caption { font-size: 10px; letter-spacing: 0.06em; }
+
+  /* Meta bar: 2-col */
   .cs__meta { grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
 
-  /* Decision / problem cards */
+  /* Persona grid: stack vertically on mobile */
+  .persona-grid { grid-template-columns: 1fr !important; gap: var(--space-md) !important; }
+  .persona-grid img { max-width: 200px; }
+
+  /* Decision / problem cards: 1-col */
   .cs__decisions, .cs__problems { grid-template-columns: 1fr; }
 
-  /* Image grids:
-     - 3-col and 4-col → 2-col (portrait phone screens look right in 2×n)
-     - 2-col stays 2-col (already compact enough)
-     - 3-2 and wide → 1-col  */
+  /* Image grids */
+  .cs__img-grid         { gap: 10px !important; }          /* override large inline gaps */
   .cs__img-grid--3,
-  .cs__img-grid--4      { grid-template-columns: 1fr 1fr; }
+  .cs__img-grid--4      { grid-template-columns: 1fr 1fr; } /* 3/4-col → 2-col */
+  .cs__img-grid--2      { grid-template-columns: 1fr 1fr; } /* keep 2-col */
   .cs__img-grid--3-2    { grid-template-columns: 1fr; }
+  .cs__img-grid img     { width: 100% !important; height: auto !important; max-width: 100%; }
 
-  /* Tighten inline gaps so images aren't squeezed on narrow screens */
-  .cs__img-grid         { gap: 12px !important; }
+  /* IA tree: compact on mobile, horizontal scroll preserved */
+  .ia-tree-wrap { padding: 20px 14px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .ia-children     { gap: 10px; }
+  .ia-children--lg { gap: 20px; }
+  .ia-child:first-child:not(:only-child)::after  { right: -5px; }
+  .ia-child:last-child:not(:only-child)::after   { left: -5px; }
+  .ia-children--lg > .ia-child:first-child:not(:only-child)::after  { right: -10px; }
+  .ia-children--lg > .ia-child:last-child:not(:only-child)::after   { left: -10px; }
+  .ia-node    { font-size: 11px; padding: 5px 12px; }
+  .ia-node--sm { font-size: 10px; padding: 4px 9px; }
 
-  /* All grid images: never clip, always natural height */
-  .cs__img-grid img     { width: 100% !important; height: auto !important; }
+  /* Hero image */
+  .cs__hero-img { aspect-ratio: 4 / 3; }
 
-  /* Hero banner: shorter ratio on mobile */
-  .cs__hero-img         { aspect-ratio: 4 / 3; }
-
-  /* Business / highlighted block */
+  /* Business block */
   .cs__business         { padding: var(--space-md); margin: var(--space-xl) 0; }
-  .cs__business--bordered { padding: 8px 0 8px var(--space-md); }
+  .cs__business--bordered { padding: 6px 0 6px 16px; }
 
   /* Dash grid */
   .cs__dash-grid        { grid-template-columns: 1fr; }
   .cs__dash-grid .stack { grid-template-rows: auto auto; }
 
   /* Next project card */
-  .cs__next             { padding: var(--space-lg) var(--space-md); margin-top: var(--space-xl); }
-  .cs__next .title      { font-size: 22px; }
+  .cs__next       { padding: var(--space-md); margin-top: var(--space-xl); }
+  .cs__next .title { font-size: 20px; }
 
   /* Footer */
-  .cs__footer           { flex-direction: column; gap: 12px; text-align: center; }
+  .cs__footer { flex-direction: column; gap: 10px; text-align: center; }
 }
