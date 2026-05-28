@@ -1003,109 +1003,30 @@ section.panel {
    ================================================================= */
 @media (hover: none) { .cursor-dot, .cursor-ring, .cursor-badge { display: none; } html, body { cursor: auto; } }
 
-/* Mobile swipe hint — hidden on desktop */
-.mobile-hint {
-  display: none;
-  position: fixed;
-  bottom: 36px;
-  left: 0; right: 0;
-  justify-content: center;
-  pointer-events: none;
-  z-index: 200;
-}
-.mobile-hint__pill {
-  background: rgba(13,13,13,0.82);
-  color: #F5F2EC;
-  padding: 10px 24px;
-  border-radius: 100px;
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  animation: hintFade 4.5s ease-in-out forwards;
-}
-@keyframes hintFade {
-  0%   { opacity: 0; transform: translateY(10px); }
-  12%  { opacity: 1; transform: translateY(0); }
-  75%  { opacity: 1; }
-  100% { opacity: 0; }
-}
-
 @media (max-width: 900px) {
-  /* --- Restore horizontal panning; panels stay side-by-side --- */
-  section.panel {
-    width: 100vw !important;
-    min-width: 100vw;
-    height: 100dvh !important;
-    flex-shrink: 0;
-    overflow-y: auto;   /* inner sections can scroll vertically */
-    overflow-x: hidden;
-  }
-
-  /* Hero — single column, hide portrait */
-  .hero {
-    grid-template-columns: 1fr;
-    height: auto;
-    padding: calc(var(--nav-h) + 48px) var(--space-md) var(--space-2xl);
-    align-items: start;
-  }
-  .hero__right { display: none; }
-  .hero__title { font-size: clamp(34px, 9vw, 56px); }
-  .hero__statement { font-size: 15px; }
-
-  /* Work — vertical stack inside the panel */
-  .work {
-    flex-direction: column;
-    padding: calc(var(--nav-h) + var(--space-lg)) var(--space-md) var(--space-2xl);
-    height: auto;
-    width: 100%;
-    min-height: 100dvh;
-  }
-  .work__intro, .work__outro {
-    flex: 0 0 auto;
-    width: 100%;
-    min-height: auto;
-    border: none;
-    padding: var(--space-lg) 0;
-  }
-  .proj {
-    width: 100%;
-    min-width: unset;
-    flex-shrink: unset;
-    height: auto;
-    min-height: auto;
-    grid-template-columns: 1fr;
-  }
-  .proj__info { border-right: none; border-bottom: 1px solid var(--color-border); padding: var(--space-md) 0; }
-  .proj__image { height: 220px; }
-
-  /* About — single column */
+  body { overflow-x: hidden; overflow-y: auto; }
+  .page { height: auto; }
+  .page__sticky { position: relative; height: auto; }
+  .page__track { flex-direction: column; transform: none !important; height: auto; }
+  section.panel { width: 100% !important; height: auto; min-height: 100vh; }
+  .hero { grid-template-columns: 1fr; height: auto; }
   .about {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     height: auto;
-    min-height: 100dvh;
-    padding: calc(var(--nav-h) + var(--space-lg)) var(--space-md) var(--space-2xl);
+    padding: calc(var(--nav-h) + var(--space-lg)) var(--space-md);
   }
   .bento--bio, .bento--photo, .bento--stat, .bento--combined, .bento--education {
     grid-column: span 1; grid-row: span 1;
   }
-  .bento--photo { min-height: 260px; }
-  .bento--bio { min-height: auto; }
-
-  /* Contact */
-  .contact { padding: calc(var(--nav-h) + var(--space-xl)) var(--space-md) var(--space-xl); height: auto; min-height: 100dvh; }
-  .contact__title { font-size: clamp(28px, 7vw, 48px); }
-  .contact__actions { flex-direction: column; gap: var(--space-sm); }
-  .contact__grid, .contact__grid--2 { grid-template-columns: 1fr 1fr; max-width: 100%; }
-
-  /* Hide desktop-only chrome */
+  .bento--photo { min-height: 320px; }
+  .bento--bio { min-height: 380px; }
+  .work { flex-direction: column; padding: calc(var(--nav-h) + var(--space-lg)) var(--space-md); height: auto; }
+  .work__intro, .work__outro { flex: 0 0 auto; border: none; padding: 0; }
+  .proj { width: 100%; height: auto; grid-template-columns: 1fr; }
+  .proj__info { border-right: none; border-bottom: 1px solid var(--color-border); }
+  .proj__image { height: 320px; }
   .top-orbit { display: none; }
   .topbar__center { display: none; }
   .panel__footer { display: none; }
-  .topbar__right .nav-link { font-size: 12px; }
-
-  /* Show mobile swipe hint */
-  .mobile-hint { display: flex; }
 }
