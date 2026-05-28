@@ -1025,7 +1025,7 @@ section.panel {
   .work__intro, .work__outro { flex: 0 0 auto; border: none; padding: 0; }
   .proj { width: 100%; height: auto; grid-template-columns: 1fr; }
   .proj__info { border-right: none; border-bottom: 1px solid var(--color-border); }
-  .proj__image { height: 320px; }
+  .proj__image { aspect-ratio: 3 / 2; height: auto; }
   .top-orbit { display: none; }
   .topbar__center { display: none; }
   .panel__footer { display: none; }

@@ -521,12 +521,53 @@ body.case-study {
 /* ============================================================
    RESPONSIVE
    ============================================================ */
-@media (max-width: 900px) {
-  .cs { padding: 80px var(--space-md); }
-  .cs__header { padding: var(--space-xl) 0; }
-  .cs__meta { grid-template-columns: 1fr 1fr; }
+@media (max-width: 768px) {
+  /* Layout */
+  .cs { padding: 64px var(--space-md) var(--space-xl); }
+  .cs__header { padding: var(--space-lg) 0 var(--space-md); }
+
+  /* Typography */
+  .cs__title { font-size: clamp(26px, 7.5vw, 40px); }
+  .cs__subtitle { font-size: 15px; }
+  .cs__h2 { font-size: 22px; margin-bottom: var(--space-md); }
+  .cs__p { font-size: 15px; }
+  .cs__quote { font-size: 17px; padding-left: var(--space-md); }
+
+  /* Meta bar */
+  .cs__meta { grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
+
+  /* Decision / problem cards */
   .cs__decisions, .cs__problems { grid-template-columns: 1fr; }
-  .cs__img-grid--2, .cs__img-grid--3, .cs__img-grid--4, .cs__img-grid--3-2 { grid-template-columns: 1fr; }
-  .cs__dash-grid { grid-template-columns: 1fr; }
+
+  /* Image grids:
+     - 3-col and 4-col → 2-col (portrait phone screens look right in 2×n)
+     - 2-col stays 2-col (already compact enough)
+     - 3-2 and wide → 1-col  */
+  .cs__img-grid--3,
+  .cs__img-grid--4      { grid-template-columns: 1fr 1fr; }
+  .cs__img-grid--3-2    { grid-template-columns: 1fr; }
+
+  /* Tighten inline gaps so images aren't squeezed on narrow screens */
+  .cs__img-grid         { gap: 12px !important; }
+
+  /* All grid images: never clip, always natural height */
+  .cs__img-grid img     { width: 100% !important; height: auto !important; }
+
+  /* Hero banner: shorter ratio on mobile */
+  .cs__hero-img         { aspect-ratio: 4 / 3; }
+
+  /* Business / highlighted block */
+  .cs__business         { padding: var(--space-md); margin: var(--space-xl) 0; }
+  .cs__business--bordered { padding: 8px 0 8px var(--space-md); }
+
+  /* Dash grid */
+  .cs__dash-grid        { grid-template-columns: 1fr; }
   .cs__dash-grid .stack { grid-template-rows: auto auto; }
+
+  /* Next project card */
+  .cs__next             { padding: var(--space-lg) var(--space-md); margin-top: var(--space-xl); }
+  .cs__next .title      { font-size: 22px; }
+
+  /* Footer */
+  .cs__footer           { flex-direction: column; gap: 12px; text-align: center; }
 }
